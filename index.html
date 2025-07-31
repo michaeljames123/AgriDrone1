@@ -91,7 +91,7 @@
       formData.append('mode', mode);
 
       try {
-        const res = await fetch("http://127.0.0.1:5000/predict", {
+        const res = await fetch("/predict", {
           method: "POST",
           body: formData
         });
@@ -137,7 +137,7 @@
         }
 
         resultBox.classList.remove("hidden");
-        processedImg.src = "http://127.0.0.1:5000" + data.image_url;
+        processedImg.src = data.image_url;
         processedImg.classList.remove("hidden");
         resetBtn.classList.remove("hidden");
 
